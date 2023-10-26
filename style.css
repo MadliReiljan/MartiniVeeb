@@ -1,0 +1,86 @@
+
+/*----- NAV BAR -----*/
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #414141;
+    z-index: 99;
+}
+
+.nav_content {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #FFB55E;
+    transition: 0.3s;
+}
+
+nav .logo a:hover {
+    color: #FFD29E;
+}
+
+nav .checkbox {
+    display: none;
+}
+
+nav input {
+    display: none;
+}
+
+nav .checkbox i {
+    font-size: 2rem;
+    color: #FFB55E;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+}
+
+.ul-lisa {
+    gap: 0;
+}
+
+ul li a {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color:#FFF2E6;
+    transition: 0.3s;
+}
+
+ul li a:hover {
+    transition: left;
+    border-top-color: #FFB55E;
+    border-bottom-color: #FFB55E;
+    color: #FFD29E;
+}
+
+ul li a img {
+    width: 40px; 
+    height: 40px; 
+    border: none; 
+}
+
+
+/*----- HOME PAGE ----- */
