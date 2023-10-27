@@ -91,7 +91,7 @@ ul li a img {
 }
 
 ul li.no-hover a{
-    margin-right: ;
+    margin-right: 2px;
     background-color: transparent;
     transition: none;
 }
@@ -153,7 +153,7 @@ ul li:last-child a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width 100%;
+    width: 100%;
     margin: auto;
     padding: 20px;
     color: #FFF2E6;
@@ -169,4 +169,36 @@ ul li:last-child a {
 .image-column {
     flex: 1;
     text-align: center;
+}
+
+
+/*----- contact page -----*/
+#contact {
+    margin-top: 150px;
+    color: #FFB55E;
+}
+#contact .form{
+    width:45%;
+    padding: 20px;
+    box-sizing: border-box;
+    border:none;
+    background-color: #414141;
+    border-radius: 20px;
+}
+#contact .form .form-group{
+    align-items: right;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 20px;
+
+}
+
+#contact .btn {
+    text-align: center;
+    size-adjust: 20px;
+    border-radius: 10px;
+    background-color: #FFB55E;
+}
+#contact .btn:hover{
+    background-color:#FFD29E;
 }
