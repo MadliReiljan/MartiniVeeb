@@ -84,3 +84,9 @@ ul li a img {
 
 
 /*----- HOME PAGE ----- */
+
+.showcase {
+    background: url('main-lehe-pildid/IMG_3911-2.jpg') no-repeat center center/cover;
+    height: 800px;
+}
+
