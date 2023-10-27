@@ -82,5 +82,35 @@ ul li a img {
     border: none; 
 }
 
+/*----- contact page -----*/
+#contact {
+    margin-top: 150px;
+    color: #FFB55E;
+}
+#contact .form{
+    width:45%;
+    padding: 20px;
+    box-sizing: border-box;
+    border:none;
+    background-color: #414141;
+    border-radius: 20px;
+}
+#contact .form .form-group{
+    align-items: right;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 20px;
+
+}
+
+#contact .btn {
+    text-align: center;
+    size-adjust: 20px;
+    border-radius: 10px;
+    background-color: #FFB55E;
+}
+#contact .btn:hover{
+    background-color:#FFD29E;
+}
 
 /*----- HOME PAGE ----- */
