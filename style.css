@@ -2,6 +2,28 @@
     margin: 0;
     padding: 0;
 }
+
+
+/*----- SCROLL BUTTON MOVER -----*/
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  section#down {
+    scroll-margin-top: 100px;
+  }
+  /* Adjust the scroll position for the "About Me" section */
+  section#about {
+    scroll-margin-top: 80px; 
+  }
+  
+  /* Adjust the scroll position for the "Education" section */
+  section#education {
+    scroll-margin-top: 10px; 
+  }
+
+  
 /*----- NAV BAR -----*/
 nav {
     width: 100%;
@@ -24,7 +46,7 @@ nav {
 }
 
 nav .logo {
-    margin-left: 5rem;
+    margin-left: 10rem;
     margin-right: 2rem;
 }
 
@@ -63,6 +85,10 @@ ul {
     transition: left 0.3s;
 }
 
+ul li {
+    position: relative;
+}
+
 .ul-lisa {
     gap: 0;
 }
@@ -79,7 +105,6 @@ ul li a {
 
 ul li a:hover {
     transition: left;
-    border-top-color: #FFB55E;
     border-bottom-color: #FFB55E;
     color: #FFD29E;
 }
@@ -102,7 +127,30 @@ ul li.no-hover a:hover{
 }
 
 ul li:last-child a {
-    margin-right: 50px; 
+    margin-right: 5rem; 
+}
+
+/*----- NAV DROPDOWN MENU -----*/
+
+.dropdown-menu {
+    display: none;
+}
+
+ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    background-color: #414141;
+}
+
+.dropdown-menu ul {
+    display: block;
+    margin: 10px;
+}
+
+.dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
 }
 
 
@@ -132,7 +180,7 @@ ul li:last-child a {
     position: relative;
     z-index: 1;
     padding-top: 370px;
-    font-size: 24px;
+    font-size: 30px;
     letter-spacing: 10px;
 }
 
@@ -148,31 +196,100 @@ ul li:last-child a {
 
 
 /*----- ABOUT ME -----*/
+.about {
+    width: 100%;
+    padding: 78px 0px;
+    background-color: #2E2D2C;
+}
 
-.flex-container {
+.about img {
+    height: auto;
+    width: 420px;
+}
+
+.about-text {
+    width: 550px;
+}
+
+.main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: auto;
-    padding: 20px;
+    justify-content: space-around;
+}
+
+.about-text h1 {
+    color: #FFB55E;
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-text p {
     color: #FFF2E6;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+button {
+    background: #FFB55E;
+    color: #2E2D2C;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+button:hover {
+    background: #FFD29E;
+    border: 2px solid #FFD29E;
+    cursor: pointer;
+}
+
+.kriips1 {
+    margin-bottom: 1rem;
+    border: none;
+    height: 1px;
+    background-color: #FFD29E;
+}
+
+.kriips2 {
+    margin-bottom: 1rem;
+    border: none;
+    height: 1px;
+    background-color: #FFD29E;
+}
+
+/*----- ALBUMS -----*/
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-gap: 20px;
+    padding-top: 1rem;
     background-color: #2E2D2C;
-    
 }
 
-.text-column {
-    flex: 1;
-    padding: 20px;
+.pic {
+    position: relative;
+    padding-bottom: 1rem;
+    max-width: 400px;
 }
 
-.image-column {
-    flex: 1;
-    text-align: center;
+.pic img {
+    width: 100%;
+    height: 95%;
 }
 
 
-/*----- contact page -----*/
+/*----- CONTACT PAGE -----*/
 #contact-header{
     padding-left: 5%;
     text-align: center;
@@ -246,7 +363,7 @@ ul li:last-child a {
     cursor:pointer;
 }
 
-/*------FOOTER------*/
+/*------ FOOTER ------*/
 footer {
     height: 40px;
     align-items: center;

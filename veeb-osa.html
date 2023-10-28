@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>Hollo Photos</title>
@@ -19,11 +22,19 @@
             </label>
             <input type="checkbox" name="check" id="check" />
             <ul>
-                <li><a href="">Pealeht</a></li>
-                <li><a href="about">Minust</a></li>
-                <li><a href="sessions">Sessioonid</a></li>
-                <li><a href="albums">Albumid</a></li>
-                <li><a href="contact">Kontakt</a></li>
+                <li><a href="#home">Pealeht</a></li>
+                <li><a href="#about">Minust</a></li>
+                <li><a href="#albums">Albumid</a></li>
+                <li>
+                    <a href="#sessions">Sessioonid <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="ilupildid.html">Ilupildid</a></li>
+                            <li><a href="muugipildid.html">Müügipildid</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#contact-header">Kontakt</a></li>
             </ul>
             <ul>
                 <li class="no-hover"><a href="https://www.instagram.com/hollophotos/"><img src="images/instagram.png"></a></li>
@@ -32,65 +43,101 @@
         </div>
     </nav>
     <!-- Home Page -->
-    <div class="showcase">
-        <div class="photo">
-            <div class="container">
-                <h1>KARL MARTIN HOLLO</h1>
-                <hr class="joon">
-                <p><span class="tekst1">Fotograaf</span></p>
+    <section id="home">
+        <div class="showcase">
+            <div class="photo">
+                <div class="container">
+                    <h1>KARL MARTIN HOLLO</h1>
+                    <hr class="joon">
+                    <p><span class="tekst1">Fotograaf</span></p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+    <hr>
     <!-- About Me Page -->
-    <main class="flex-container">
-        <div class="text-column">
-            <h2>Introduction</h2>
-            <p>Write a brief introduction about yourself here.</p>
-            <h2>Background</h2>
-            <p>Provide information about your background and experiences.</p>
+    <section class="about" id="about">
+        <div class="main">
+            <div class="about-text">
+                <h1>Minust</h1>
+                <hr class="kriips1">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, eum. Iure ducimus, 
+                    nemo molestiae a suscipit vitae quibusdam quae at. 
+                    Voluptatem laboriosam perferendis placeat beatae commodi inventore officiis, at expedita.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis asperiores ab laboriosam cupiditate sunt quisquam, 
+                    amet nesciunt praesentium quibusdam molestias cum modi perspiciatis quos omnis harum culpa. Consequatur, ipsam modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Adipisci explicabo maiores unde modi et nobis quo laboriosam tenetur aliquam, 
+                    illum nulla, culpa ducimus doloremque! Officia blanditiis error est voluptate similique.
+                </p>
+                <hr class="kriips2">
+                <button type="button">BRONEERI</button>
+            </div>
+            <img src="main-lehe-pildid/martin.jpg">
         </div>
-        <div class="image-column">
-            <img src="" alt="Your Image">
-        </div>
-    </main>
+    </section>
     <!-- Albums -->
+    <hr>
+    <section class="album" id="albums">
+        <div class="gallery">
+            <div class="pic">
+                <img src="main-lehe-pildid/heleBMWfront.jpg">
+            </div>
+            <div class="pic">
+                <img src="main-lehe-pildid/tumeBMWfront.jpg">
+            </div>
+            <div class="pic">
+                <img src="main-lehe-pildid/heleBMWfront.jpg">
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="pic">
+                <img src="main-lehe-pildid/heleBMWfront.jpg">
+            </div>
+            <div class="pic">
+                <img src="main-lehe-pildid/tumeBMWfront.jpg">
+            </div>
+            <div class="pic">
+                <img src="main-lehe-pildid/heleBMWfront.jpg">
+            </div>
+        </div>
+    </section>
+    <hr>
     <!-- Contact Page, Forms connected to JS-->
-    <h2 id="contact-header">Võta minuga ühendust!</h2>
-    <div id="contact">
-        <div class="contact-info">
-        <p>Tartu, Eesti<br>Tel: +372 5373 9475<br>Email: hollophotos@gmail.com</p>
+        <div id="contact">
+            <h2 id="contact-header">Võta minuga ühendust!</h2>
+            <div class="contact-info">
+            <p>Tartu, Eesti<br>Tel: +372 5373 9475<br>Email: hollophotos@gmail.com</p>
+            </div>
+            <form action="">
+            <div class="form">
+                <div class="form-group">
+                    <label for="firstName">Eesnimi</label><br>
+                    <input type="text" id="firstName" placeholder="Sisesta oma Eesnimi">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="lastName">Perekonnanimi</label><br>
+                    <input type="text" id="lastName" placeholder="Sisesta oma Perekonnanimi">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="email">Email</label><br>
+                    <input type="text" id="email" placeholder="Sisesta oma Email">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="theme">Teema</label><br>
+                    <input type="text" id="theme" placeholder="Sisesta oma Teema">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="message">Sõnum</label><br>
+                    <input type="text" id="message" placeholder="Sisesta oma Sõnum">
+                </div><br>
+                <input type="submit" value="Saada" class="btn">
+            </div>
+            </form>
         </div>
-        <form action="">
-        <div class="form">
-            <div class="form-group">
-                <label for="firstName">Eesnimi</label><br>
-                <input type="text" id="firstName" placeholder="Sisesta oma Eesnimi">
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="lastName">Perekonnanimi</label><br>
-                <input type="text" id="lastName" placeholder="Sisesta oma Perekonnanimi">
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="email">Email</label><br>
-                <input type="text" id="email" placeholder="Sisesta oma Email">
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="theme">Teema</label><br>
-                <input type="text" id="theme" placeholder="Sisesta oma Teema">
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="message">Sõnum</label><br>
-                <input type="text" id="message" placeholder="Sisesta oma Sõnum">
-            </div><br>
-            <input type="submit" value="Saada" class="btn">
-        </div>
-        </form>
-    </div>
-
     <!-- Footer -->
     <footer>
         <div>
