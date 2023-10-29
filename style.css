@@ -157,7 +157,7 @@ ul li:hover .dropdown-menu {
 /*----- HOME PAGE ----- */
 
 .photo {
-    background: url('main-lehe-pildid/mainBMW.jpg') no-repeat center center/cover;
+    background: url('main-lehe-pildid/mainBMW_600.jpg') no-repeat center center/cover;
     height: 900px;
     width: 100%;
     margin: 0px;
@@ -272,14 +272,14 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    grid-gap: 20px;
+    grid-gap: 10px;
     padding-top: 1rem;
     background-color: #2E2D2C;
 }
 
 .pic {
     position: relative;
-    padding-bottom: 1rem;
+    padding-bottom: 10px;
     max-width: 400px;
 }
 
@@ -291,33 +291,58 @@ button:hover {
 
 /*----- CONTACT PAGE -----*/
 .forms{
-    display: flex
-    flex-wrap:wrap;
-    width:100%;
+    width: 100%;
+    padding: 78px 0px;
+    background-color: #2E2D2C;
 }
+
+.form-main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+
+    justify-content: space-around;
+}
+
 #contact-header {
     display: flex;
-    padding: 5% 10%;
-    text-align: left;
-    display: flex;
-    justify-content: space-around, left;
+    flex-direction: column;
     background-color: #2E2D2C;
     color: #FFB55E;
+    text-align: left;
+    align-items: flex-start;
 }
+
+#contact-header h2 {
+    white-space: nowrap; 
+    font-size: 30px;
+}
+
+#contact-header p {
+    white-space: nowrap; 
+}
+
 .contact-info {
-    display:flex;
+    display: flex;
     font-size: 20px;
     background-color: #2E2D2C;
+    letter-spacing: 1px;
+    line-height: 28px;
     color: #D9D9D9;
-    text-align: center;
+    text-align: left;
+    margin-top: 2rem;
+    border: 2px solid #FFB55E;
+    border-radius: 10px; 
+    padding: 20px;
 }
 
 #contact {
     display:flex;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: #2E2D2C;
     padding-bottom: 60px;
-    width:100%;
+    width: 100%;
 }
 #contact .form {
     color: #FFB55E;
@@ -325,22 +350,27 @@ button:hover {
     border: none;
     background-color: #414141;
     border-radius: 20px;
+    padding: 20px;
+    width: 200%;
+    margin: 0 auto;
 }
 
 #contact .form .form-group {
     border-radius: 20px;
+    margin: 4px ;
 }
 
 #contact .form-group label {
+    margin-bottom: 2px;
     margin: 0;
     padding: 0;
-    font-size: 20px;
+    font-size: 26px;
 }
 
 #contact .form-group input {
-    text-align: center;
+    font-size: 18px;
     width: 90%;
-    height: 25px;
+    height: 30px;
     border: none;
     border-radius: 5px;
     background-color: #D9D9D9;
@@ -349,11 +379,12 @@ button:hover {
 #contact .form-group #message {
     resize: both;
     overflow: auto;
-    text-align: left;
+    height: 10rem;
 }
 
 #contact .btn {
     font-weight: bold;
+    color: #2E2D2C;
     font-size: 15px;
     border: none;
     height: 30px;
@@ -361,6 +392,12 @@ button:hover {
     text-align: center;
     border-radius: 10px;
     background-color: #FFB55E;
+}
+
+#contact .btn:hover {
+    background: #FFD29E;
+    border: 2px solid #FFD29E;
+    cursor: pointer;
 }
 
 /*------ FOOTER ------*/
@@ -373,6 +410,7 @@ footer {
     background-color: #414141;
     color:#D9D9D9;
     padding-top: 15px;
+    padding-bottom: 15px;
     font-size: 20px;
 }
 
