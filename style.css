@@ -290,82 +290,84 @@ button:hover {
 
 
 /*----- CONTACT PAGE -----*/
-#contact-header{
-    padding-left: 5%;
-    text-align: center;
-    justify-content:space-around,left;
+.forms{
+    display: flex
+    flex-wrap:wrap;
+    width:100%;
+}
+#contact-header {
     display: flex;
+    padding: 5% 10%;
+    text-align: left;
+    display: flex;
+    justify-content: space-around, left;
     background-color: #2E2D2C;
     color: #FFB55E;
 }
-#contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contact-info {
+    display:flex;
+    font-size: 20px;
     background-color: #2E2D2C;
-    padding-bottom: 60px;
-    margin: auto;
+    color: #D9D9D9;
+    text-align: center;
 }
 
-#contact .contact-info{
-    width:20%;
+#contact {
+    display:flex;
+    justify-content: space-evenly;
+    background-color: #2E2D2C;
+    padding-bottom: 60px;
+    width:100%;
 }
-#contact p {
-    color:#D9D9D9;
-    text-align: center;
-}
-#contact .form{
-    flex: 2;
-    width: 175%;
+#contact .form {
     color: #FFB55E;
-    padding:30px;
     box-sizing: border-box;
-    border:none;
+    border: none;
     background-color: #414141;
     border-radius: 20px;
 }
-#contact .form .form-group{
-    box-sizing: border-box;
-    border: none;
-    border-radius: 20px;
 
+#contact .form .form-group {
+    border-radius: 20px;
 }
-#contact .form-group label{
-    margin: 5px;    
-    padding-bottom: 10px;
-    font-size: 20px; 
+
+#contact .form-group label {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
 }
-#contact .form-group input{
-    width:100%;
+
+#contact .form-group input {
+    text-align: center;
+    width: 90%;
     height: 25px;
-    border:none;
+    border: none;
     border-radius: 5px;
     background-color: #D9D9D9;
 }
-#contact .form-group #message{
-    height:100px;
-    vertical-align: top;
+
+#contact .form-group #message {
+    resize: both;
+    overflow: auto;
+    text-align: left;
 }
 
 #contact .btn {
     font-weight: bold;
     font-size: 15px;
-    border:none;
+    border: none;
     height: 30px;
     width: 100px;
     text-align: center;
-    justify-content: center;
     border-radius: 10px;
     background-color: #FFB55E;
-}
-#contact .btn:hover{
-    background-color:#FFD29E;
-    cursor:pointer;
 }
 
 /*------ FOOTER ------*/
 footer {
+    display: flex;
     height: 40px;
+    justify-content: center;
     align-items: center;
     text-align: center;
     background-color: #414141;
