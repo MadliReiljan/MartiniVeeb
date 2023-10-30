@@ -388,7 +388,7 @@ button:hover {
     padding-left: 10px;
     line-height: 20px;
     resize: none;
-    padding-top: 2px;
+    padding-top: 10px;
 }
 
 #contact .form-group textarea::placeholder {
