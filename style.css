@@ -172,8 +172,6 @@ ul li:hover .dropdown-menu {
     z-index: -1;
 }
 
-
-
 .photo::before {
     content: "";
     position: absolute;
@@ -257,6 +255,11 @@ button {
     padding: 13px 30px;
     border-radius: 30px;
     transition: .4s;
+}
+
+.button-link {
+    text-decoration: none; 
+    color: #2E2D2C;
 }
 
 button:hover {
@@ -373,6 +376,20 @@ button:hover {
     cursor: pointer;
 }
 
+/*----- ILUPILDID -----*/
+
+.ilupiltide-info {
+    height: 70vh;
+    position: relative;
+    padding-top: 10rem; 
+}
+
+.ILU-info {
+    justify-content: center;
+    text-align: center;
+    color: #000000;
+    z-index: 0; 
+}
 /*----- CONTACT PAGE -----*/
 .forms{
     width: 100%;
