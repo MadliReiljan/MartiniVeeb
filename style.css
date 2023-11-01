@@ -11,19 +11,22 @@ html {
     scroll-behavior: smooth;
   }
   
-  section#down {
+  section#home {
     scroll-margin-top: 100px;
   }
-  /* Adjust the scroll position for the "About Me" section */
+
   section#about {
     scroll-margin-top: 80px; 
   }
-  
-  /* Adjust the scroll position for the "Education" section */
+
+
   section#education {
     scroll-margin-top: 10px; 
   }
 
+.scroll-target {
+    scroll-margin-top: 10px; /* Adjust the offset as needed */
+}
   
 /*----- NAV BAR -----*/
 nav {
@@ -380,7 +383,7 @@ button:hover {
 /*----- ILUPILTIDE INFO -----*/
 
 .ilupiltide-info {
-    height: 20vh;
+    height: 35vh;
     padding-top: 8rem; 
     background-color: #2E2D2C;
     display: flex;
@@ -413,6 +416,7 @@ button:hover {
 .ILU-info p {
     margin-top: 10px;
 }
+
 /*----- ILUPILDID -----*/
 
 .pildid {
@@ -488,8 +492,6 @@ button:hover {
 }
 
 
-
-
 /*----- CONTACT PAGE -----*/
 .forms{
     width: 100%;
@@ -514,6 +516,8 @@ button:hover {
     color: #FFB55E;
     text-align: left;
     align-items: flex-start;
+    order: 1;
+    margin: 0 auto;
 }
 
 #contact-header h2 {
@@ -545,6 +549,8 @@ button:hover {
     background-color: #2E2D2C;
     padding-bottom: 60px;
     width: 100%;
+    order: 2;
+    margin: 0 auto;
 }
 #contact .form {
     color: #FFB55E;
@@ -642,3 +648,30 @@ footer {
     font-size: 20px;
 }
 
+
+
+/*----- EKRAANI SUURUSE MUUTMINE ILUPILTIDE OSAS -----*/
+@media screen and (max-width: 500px){
+    .ilupiltide-info {
+        height: 60vh;
+    }
+}
+@media screen and (max-width: 500px) {
+    .pildid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .form-main {
+        flex-direction: column;
+    }
+    #contact-header {
+        margin: 0 auto; 
+    }
+
+    #contact {
+        margin: 0 auto;
+    }
+}
