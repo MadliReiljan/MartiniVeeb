@@ -86,10 +86,14 @@ ul {
     gap: 1rem;
     list-style: none;
     transition: left 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 ul li {
     position: relative;
+    flex-shrink: 0;
 }
 
 .ul-lisa {
@@ -650,27 +654,34 @@ footer {
 
 
 /*----- EKRAANI SUURUSE MUUTMINE ILUPILTIDE OSAS -----*/
-@media screen and (max-width: 500px){
-    .ilupiltide-info {
-        height: 60vh;
-    }
-}
-@media screen and (max-width: 500px) {
-    .pildid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
+/*----- Navigatsiooni Rida -----*/
 @media (max-width: 768px) {
+    
+    nav .checkbox {
+        display: block;
+    }
 
-    .form-main {
+    nav .logo {
+        margin: 1rem 0;
+    }
+
+    ul {
+        position: absolute;
+        left: -100%;
+        background-color: #414141;
         flex-direction: column;
+        align-items: center;
     }
-    #contact-header {
-        margin: 0 auto; 
+    
+    nav #check:checked ~ ul {
+        display: flex;
+        top: 65px;
+        left: 0;
+        right: 0;
     }
-
-    #contact {
-        margin: 0 auto;
+    
+    ul li a {
+        font-size: 1.25rem;
     }
+    
 }
