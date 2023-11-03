@@ -19,7 +19,6 @@ html {
     scroll-margin-top: 80px; 
   }
 
-
   section#education {
     scroll-margin-top: 10px; 
   }
@@ -192,7 +191,7 @@ ul li:hover .dropdown-menu {
     position: relative;
     z-index: 1;
     align-items: center;
-    padding-top: 370px;
+    padding-top: 300px;
     font-size: 30px;
     letter-spacing: 10px;
 }
