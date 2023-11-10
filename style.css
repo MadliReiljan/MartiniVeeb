@@ -293,23 +293,23 @@ button:hover {
 /*----- ALBUMS -----*/
 .gallery {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    grid-auto-flow: dense;
     background-color: #2E2D2C;
 }
 
 .pic {
+    width: 100%;
+    height: 100%;
     position: relative;
-    max-width: 400px;
 }
 
 .pic img {
     width: 100%;
-    height: 95%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .image-container {
@@ -655,6 +655,189 @@ footer {
 
 
 /*----- EKRAANI SUURUSE MUUTMINE ILUPILTIDE OSAS -----*/
+
+html, body {
+    overflow-x: hidden;
+}
+
+@media (max-width: 1440px) {
+    
+}
+
+@media (max-width: 1280px) {
+    .pildid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .main {
+        flex-direction: column-reverse;
+    }
+
+    .about-text {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .pic {
+        width: calc(25% - 10px); /* Adjust the width for 4 images in a row */
+    }
+
+    .main img {
+        border-radius: 20px;
+    }
+
+    .pildid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .form-main {
+        flex-direction: column;
+       
+    }
+    #contact {
+        width: 50%;
+        padding-right: 15rem;
+        padding-top: 3rem;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .main {
+        flex-direction: column-reverse;
+    }
+
+    .about-text {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .main img {
+        border-radius: 20px;
+    }
+
+    .pildid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .form-main {
+        flex-direction: column;
+       
+    }
+    #contact {
+        width: 50%;
+        padding-right: 15rem;
+        padding-top: 3rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column-reverse;
+    }
+
+    .about-text {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .main img {
+        border-radius: 20px;
+    }
+
+    .pildid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .form-main {
+        flex-direction: column;
+       
+    }
+    #contact {
+        width: 50%;
+        padding-right: 15rem;
+        padding-top: 3rem;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .main {
+        flex-direction: column-reverse;
+    }
+
+    .joon {
+        max-width: 50%;
+    }
+
+    .about-text {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .main img {
+        border-radius: 20px;
+    }
+
+    .ilupiltide-info {
+        height: 60vh;
+    }
+
+    .pildid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-main {
+        flex-direction: column;
+       
+    }
+    #contact {
+        width: 50%;
+        padding-right: 15rem;
+        padding-top: 3rem;
+    }
+}
+
+@media (max-width: 670px) {
+
+}
+
+@media (max-width: 600px) {
+    .main {
+        flex-direction: column-reverse;
+        max-width: 90%;
+    }
+
+    .about-text {
+        margin-top: 2rem;
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .main img {
+        border-radius: 20px;
+    }
+
+    .ilupiltide-info {
+        width: 100%;
+    }
+
+    .pildid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-main {
+        flex-direction: column;
+       
+    }
+    #contact {
+        width: 50%;
+        padding-right: 15rem;
+        padding-top: 3rem;
+    }
+}
+
+
 @media (max-width: 320px) {
     .main {
         flex-direction: column-reverse;
@@ -674,7 +857,7 @@ footer {
     }
 
     .pildid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .form-main {
@@ -686,93 +869,5 @@ footer {
     }
 }
 
-@media (max-width: 400px) {
-    .main {
-        flex-direction: column-reverse;
-        max-width: 90%;
-    }
 
-    .about-text {
-        margin-top: 2rem;
-        text-align: center;
-        max-width: 90%;
-    }
 
-    .main img {
-        border-radius: 20px;
-    }
-
-    .ilupiltide-info {
-        height: 60vh;
-    }
-
-    .pildid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .form-main {
-        flex-direction: column;
-       
-    }
-    #contact .form {
-        width: 50%;
-    }
-}
-
-@media (max-width: 600px) {
-
-    .main {
-        flex-direction: column-reverse;
-    }
-
-    .about-text {
-        margin-top: 2rem;
-        text-align: center;
-    }
-
-    .main img {
-        border-radius: 20px;
-    }
-
-    .ilupiltide-info {
-        height: 60vh;
-    }
-
-    .pildid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .form-main {
-        flex-direction: column;
-       
-    }
-    #contact .form {
-        width: 150%;
-    }
-}
-
-@media (max-width: 768px) {
-    .main {
-        flex-direction: column-reverse;
-    }
-
-    .about-text {
-        margin-top: 2rem;
-        text-align: center;
-    }
-
-    .main img {
-        border-radius: 20px;
-    }
-
-    .pildid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .form-main {
-        flex-direction: column;
-       
-    }
-    #contact .form {
-        width: 150%;
-    }
-}
