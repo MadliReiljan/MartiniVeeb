@@ -163,7 +163,7 @@ ul li:hover .dropdown-menu {
 /*----- HOME PAGE ----- */
 
 #home {
-    height: 70vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -655,16 +655,27 @@ html, body {
 }
 
 @media (max-width: 1440px) {
+    #home {
+        height: 50vh;
+    }
     
 }
 
 @media (max-width: 1280px) {
+    #home {
+        height: 50vh;
+    }
+
     .pildid {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media (max-width: 1024px) {
+    #home {
+        height: 50vh;
+    }
+
     .main {
         flex-direction: column-reverse;
     }
@@ -693,6 +704,9 @@ html, body {
 }
 
 @media (max-width: 800px) {
+    #home {
+        height: 50vh;
+    }
 
     .main {
         flex-direction: column-reverse;
@@ -727,6 +741,10 @@ html, body {
 
 
 @media (max-width: 768px) {
+    #home {
+        height: 50vh;
+    }
+
     .main {
         flex-direction: column-reverse;
     }
@@ -755,6 +773,9 @@ html, body {
 }
 
 @media (max-width: 700px) {
+    #home {
+        height: 50vh;
+    }
 
     .main {
         flex-direction: column-reverse;
@@ -792,11 +813,11 @@ html, body {
     }
 }
 
-@media (max-width: 670px) {
-
-}
-
 @media (max-width: 600px) {
+    #home {
+        height: 50vh;
+    }
+
     .main {
         flex-direction: column-reverse;
         max-width: 90%;
