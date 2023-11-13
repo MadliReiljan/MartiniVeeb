@@ -55,11 +55,11 @@ nav {
 
 nav .logo {
     margin-left: 5rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 nav .logo a {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
     text-decoration: none;
     color: #FFB55E;
@@ -75,16 +75,6 @@ nav .checkbox {
 }
 
 #check {
-    display: none;
-}
-
-nav .checkbox i {
-    font-size: 30px;
-    color: #FFB55E;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
     display: none;
 }
 
@@ -115,7 +105,7 @@ ul li a {
     padding: 0.5rem 1rem;
     border: 2px solid transparent;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 400;
     color:#FFF2E6;
     transition: 0.3s;
@@ -144,36 +134,13 @@ ul li.no-hover a:hover{
     border-bottom-color: transparent;
 }
 
+.width {
+    margin-right: 4rem;
+}
+
 ul li:last-child a {
-    margin-right: 5rem; 
+    margin-right: 1rem; 
 }
-
-/*----- NAV DROPDOWN MENU -----*/
-
-.dropdown-menu {
-    display: none;
-}
-
-ul li:hover .dropdown-menu {
-    display: block;
-    position: absolute;
-    top: 100%;
-    background-color: #414141;
-}
-
-.dropdown-menu ul {
-    display: block;
-    margin: 10px;
-}
-
-.dropdown-menu ul li {
-    width: 170px;
-    padding: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    
-}
-
 
 /*----- HOME PAGE ----- */
 
@@ -401,7 +368,7 @@ button:hover {
 /*----- ILUPILTIDE INFO -----*/
 
 .ilupiltide-info {
-    height: 30vh;
+    height: 20vh;
     padding-top: 8rem; 
     background-color: #2E2D2C;
     display: flex;
@@ -698,6 +665,47 @@ html, body {
     }
 }
 
+@media (max-width: 1240px) {
+    .nav_content .logo a{
+        font-size: rem;
+    }
+    nav .checkbox {
+        display: block;
+        position: relative;
+        z-index: 1;
+        font-size: 30px;
+        color: #FFB55E;
+        float: right;
+        
+        margin-right: 40px;
+        cursor: pointer;
+    }
+    
+    ul {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        left: -100%;
+        top: 80px;
+        background-color: #2E2D2C;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+    
+    nav #check:checked ~ ul {
+        left: 0;
+    }
+    
+    ul li a {
+        font-size: 2rem;
+    }
+
+    .width {
+        margin: 0 auto;
+    }
+}
+
 @media (max-width: 1024px) {
     #home {
         height: 50vh;
@@ -728,25 +736,35 @@ html, body {
         padding-right: 15rem;
         padding-top: 3rem;
     }
+
+    .ilupiltide-info {
+        height: 25vh;
+    }
 }
 
 @media (max-width: 800px) {
-    .logo {
-        font-size: 30px;
-        padding-left: 50px;
+    .nav_content .logo a{
+        font-size: rem;
     }
-
     nav .checkbox {
         display: block;
+        position: relative;
+        z-index: 1;
+        font-size: 30px;
+        color: #FFB55E;
+        float: right;
+        
+        margin-right: 40px;
+        cursor: pointer;
     }
     
     ul {
         position: absolute;
         width: 100%;
-        height: calc(100vh - 85px);
+        height: 100vh;
         left: -100%;
         top: 80px;
-        background-color: var(--extra-light);
+        background-color: #2E2D2C;
         flex-direction: column;
         justify-content: center;
         gap: 3rem;
@@ -757,7 +775,7 @@ html, body {
     }
     
     ul li a {
-        font-size: 1.25rem;
+        font-size: 2rem;
     }
 
     #home {
@@ -851,7 +869,7 @@ html, body {
     }
 
     .ilupiltide-info {
-        height: 60vh;
+        height: 35vh;
     }
 
     .pildid {
@@ -895,6 +913,7 @@ html, body {
 
     .ilupiltide-info {
         width: 100%;
+        height: 50vh;
     }
 
     .pildid {
