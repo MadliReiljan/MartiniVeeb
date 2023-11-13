@@ -4,6 +4,11 @@
     font-family: 'Playfair Display', serif;
 }
 
+body {
+    background-color: #2E2D2C; 
+    margin: 0;
+}
+
 
 /*----- SCROLL BUTTON MOVER -----*/
 
@@ -69,7 +74,17 @@ nav .checkbox {
     display: none;
 }
 
-nav input {
+#check {
+    display: none;
+}
+
+nav .checkbox i {
+    font-size: 30px;
+    color: #FFB55E;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
     display: none;
 }
 
@@ -223,7 +238,8 @@ ul li:hover .dropdown-menu {
 
 .about img {
     height: auto;
-    width: 420px;
+    width: 480px;
+    border-radius: 10%;
 }
 
 .about-text {
@@ -251,7 +267,7 @@ ul li:hover .dropdown-menu {
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 18px;
-    margin-bottom: 45px;
+    margin-bottom: 1rem;
 }
 
 button {
@@ -294,16 +310,20 @@ button:hover {
 .gallery {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-gap: 10px;
     grid-auto-flow: dense;
     background-color: #2E2D2C;
+    margin: 0 auto;
 }
 
 .pic {
+    
     width: 100%;
     height: 100%;
     position: relative;
+    margin: 0 auto;
 }
 
 .pic .image-container {
@@ -646,19 +666,26 @@ footer {
     font-size: 20px;
 }
 
-
-
 /*----- EKRAANI SUURUSE MUUTMINE ILUPILTIDE OSAS -----*/
 
 html, body {
     overflow-x: hidden;
 }
 
+@media (max-width: 3000px) {
+    .about-text h1 {
+        font-size: 50px; 
+    }
+
+    .about-text p {
+        font-size: 20px; 
+    }
+}
+
 @media (max-width: 1440px) {
     #home {
         height: 50vh;
     }
-    
 }
 
 @media (max-width: 1280px) {
@@ -704,6 +731,35 @@ html, body {
 }
 
 @media (max-width: 800px) {
+    .logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav .checkbox {
+        display: block;
+    }
+    
+    ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 80px;
+        background-color: var(--extra-light);
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+    
+    nav #check:checked ~ ul {
+        left: 0;
+    }
+    
+    ul li a {
+        font-size: 1.25rem;
+    }
+
     #home {
         height: 50vh;
     }
@@ -815,7 +871,7 @@ html, body {
 
 @media (max-width: 600px) {
     #home {
-        height: 50vh;
+        height: 40vh;
     }
 
     .main {
