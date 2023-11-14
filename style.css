@@ -319,9 +319,11 @@ button:hover {
 .pic:hover .image-container img {
     filter: blur(2px); /* Apply blur to the image on hover */
     position: relative;
+    cursor: pointer;
 }
 
 .pic:hover .image-container::after {
+    cursor: pointer;
     content: "";
     position: absolute;
     top: 0;
@@ -435,6 +437,7 @@ button:hover {
 }
 
 .auto:hover .pilt img {
+    cursor:pointer;
     transform: blur(1);
 }
 
