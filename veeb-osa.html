@@ -79,31 +79,33 @@
     <section class="album" id="albums">
         
         <div class="gallery">
-            <div class="pic">
+            <div class="pic modal-trigger" onclick="openModal('main-lehe-pildid/CorvetteC6.jpg', 'Corvette C6')">
                 <div class="image-container">
-                    <img src="main-lehe-pildid/CorvetteC6.jpg" >
+                    <img src="main-lehe-pildid/CorvetteC6.jpg">
                 </div>
                 <div class="text-container">
                     <p>Corvette C6</p>
                 </div>
             </div>
-            <div class="pic">
+    
+            <div class="pic modal-trigger" onclick="openModal('main-lehe-pildid/porch911.jpg', 'Porsche 911')">
                 <div class="image-container">
-                    <img src="main-lehe-pildid/porch911.jpg" >
+                    <img src="main-lehe-pildid/porch911.jpg">
                 </div>
                 <div class="text-container">
                     <p>Porsche 911</p>
                 </div>
             </div>
-            <div class="pic">
+
+            <div class="pic modal-trigger" onclick="openModal('main-lehe-pildid/heleBMW.jpg', 'BMW 1500')">
                 <div class="image-container">
-                    <img src="main-lehe-pildid/heleBMW.jpg" >
+                    <img src="main-lehe-pildid/heleBMW.jpg">
                 </div>
                 <div class="text-container">
                     <p>BMW 1500</p>
                 </div>
             </div>
-            <div class="pic">
+            <div class="pic modal-trigger" onclick="openModal('main-lehe-pildid/BMWE46.jpg', 'BMW E46')">
                 <div class="image-container">
                     <img src="main-lehe-pildid/BMWE46.jpg">
                 </div>
@@ -111,7 +113,7 @@
                     <p>BMW E46</p>
                 </div>
             </div>
-            <div class="pic">
+            <div class="pic modal-trigger" onclick="openModal('main-lehe-pildid/YellowAndRed.jpg', 'Porsche 911')">
                 <div class="image-container">
                     <img src="main-lehe-pildid/YellowAndRed.jpg">
                 </div>
@@ -119,7 +121,7 @@
                     <p>Porsche 911</p>
                 </div>
             </div>
-            <div class="pic">
+            <div class="pic modal-trigger" onclick="openModal('main-lehe-pildid/heleBMWinside.jpg', 'BMW 1500')">
                 <div class="image-container">
                     <img src="main-lehe-pildid/heleBMWinside.jpg">
                 </div>
@@ -127,7 +129,7 @@
                     <p>BMW 1500</p>
                 </div>
             </div>
-            <div class="pic">
+            <div class="pic modal-trigger" onclick="openModal('main-lehe-pildid/muuseum.jpg', 'BMW Dixi')">
                 <div class="image-container">
                     <img src="main-lehe-pildid/muuseum.jpg">
                 </div>
@@ -135,7 +137,7 @@
                     <p>BMW Dixi</p>
                 </div>
             </div>
-            <div class="pic">
+            <div class="pic modal-trigger" onclick="openModal('main-lehe-pildid/Camaro.jpg','Chervolette Camaro')">
                 <div class="image-container">
                     <img src="main-lehe-pildid/Camaro.jpg">
                 </div>
@@ -143,13 +145,18 @@
                     <p>Chervolette Camaro</p>
                 </div>
             </div>
-            <div class="pic">
+            <div class="pic modal-trigger" onclick="openModal('main-lehe-pildid/camera.jpg', 'BMW 1500')">
                 <div class="image-container">
                     <img src="main-lehe-pildid/camera.jpg">
                 </div>
                 <div class="text-container">
                     <p>BMW 1500</p>
                 </div>
+            </div>
+            <div id="myModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modalImage">
+                <div id="caption"></div>
             </div>
         </div>
     </section>
@@ -164,11 +171,11 @@
                 </div>
             </div>
             <div id="contact">
-                <form action="">
+                <form id="contactForm" action="">
                     <div class="form">
                         <div class="form-group">
                             <label for="firstName">Eesnimi</label><br>
-                            <input type="text" id="firstName" placeholder="Sisesta oma Eesnimi">
+                            <input type="text" id="firstName" placeholder="Sisesta oma Eesnimi" required title="Palun täitke see ala.">
                         </div>
                         <br>
                         <div class="form-group">
