@@ -4,6 +4,11 @@
     font-family: 'Playfair Display', serif;
 }
 
+body {
+    background-color: #2E2D2C; 
+    margin: 0;
+}
+
 
 /*----- SCROLL BUTTON MOVER -----*/
 
@@ -50,11 +55,11 @@ nav {
 
 nav .logo {
     margin-left: 5rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 nav .logo a {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
     text-decoration: none;
     color: #FFB55E;
@@ -69,7 +74,7 @@ nav .checkbox {
     display: none;
 }
 
-nav input {
+#check {
     display: none;
 }
 
@@ -100,7 +105,7 @@ ul li a {
     padding: 0.5rem 1rem;
     border: 2px solid transparent;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 400;
     color:#FFF2E6;
     transition: 0.3s;
@@ -129,36 +134,13 @@ ul li.no-hover a:hover{
     border-bottom-color: transparent;
 }
 
+.width {
+    margin-right: 4rem;
+}
+
 ul li:last-child a {
-    margin-right: 5rem; 
+    margin-right: 1rem; 
 }
-
-/*----- NAV DROPDOWN MENU -----*/
-
-.dropdown-menu {
-    display: none;
-}
-
-ul li:hover .dropdown-menu {
-    display: block;
-    position: absolute;
-    top: 100%;
-    background-color: #414141;
-}
-
-.dropdown-menu ul {
-    display: block;
-    margin: 10px;
-}
-
-.dropdown-menu ul li {
-    width: 170px;
-    padding: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    
-}
-
 
 /*----- HOME PAGE ----- */
 
@@ -223,7 +205,8 @@ ul li:hover .dropdown-menu {
 
 .about img {
     height: auto;
-    width: 420px;
+    width: 480px;
+    border-radius: 10%;
 }
 
 .about-text {
@@ -251,7 +234,7 @@ ul li:hover .dropdown-menu {
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 18px;
-    margin-bottom: 45px;
+    margin-bottom: 1rem;
 }
 
 button {
@@ -294,16 +277,20 @@ button:hover {
 .gallery {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-gap: 10px;
     grid-auto-flow: dense;
     background-color: #2E2D2C;
+    margin: 0 auto;
 }
 
 .pic {
+    
     width: 100%;
     height: 100%;
     position: relative;
+    margin: 0 auto;
 }
 
 .pic .image-container {
@@ -381,7 +368,7 @@ button:hover {
 /*----- ILUPILTIDE INFO -----*/
 
 .ilupiltide-info {
-    height: 30vh;
+    height: 20vh;
     padding-top: 8rem; 
     background-color: #2E2D2C;
     display: flex;
@@ -646,19 +633,26 @@ footer {
     font-size: 20px;
 }
 
-
-
 /*----- EKRAANI SUURUSE MUUTMINE ILUPILTIDE OSAS -----*/
 
 html, body {
     overflow-x: hidden;
 }
 
+@media (max-width: 3000px) {
+    .about-text h1 {
+        font-size: 50px; 
+    }
+
+    .about-text p {
+        font-size: 20px; 
+    }
+}
+
 @media (max-width: 1440px) {
     #home {
         height: 50vh;
     }
-    
 }
 
 @media (max-width: 1280px) {
@@ -668,6 +662,47 @@ html, body {
 
     .pildid {
         grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1240px) {
+    .nav_content .logo a{
+        font-size: rem;
+    }
+    nav .checkbox {
+        display: block;
+        position: relative;
+        z-index: 1;
+        font-size: 30px;
+        color: #FFB55E;
+        float: right;
+        
+        margin-right: 40px;
+        cursor: pointer;
+    }
+    
+    ul {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        left: -100%;
+        top: 80px;
+        background-color: #2E2D2C;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+    
+    nav #check:checked ~ ul {
+        left: 0;
+    }
+    
+    ul li a {
+        font-size: 2rem;
+    }
+
+    .width {
+        margin: 0 auto;
     }
 }
 
@@ -701,9 +736,48 @@ html, body {
         padding-right: 15rem;
         padding-top: 3rem;
     }
+
+    .ilupiltide-info {
+        height: 25vh;
+    }
 }
 
 @media (max-width: 800px) {
+    .nav_content .logo a{
+        font-size: rem;
+    }
+    nav .checkbox {
+        display: block;
+        position: relative;
+        z-index: 1;
+        font-size: 30px;
+        color: #FFB55E;
+        float: right;
+        
+        margin-right: 40px;
+        cursor: pointer;
+    }
+    
+    ul {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        left: -100%;
+        top: 80px;
+        background-color: #2E2D2C;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+    
+    nav #check:checked ~ ul {
+        left: 0;
+    }
+    
+    ul li a {
+        font-size: 2rem;
+    }
+
     #home {
         height: 50vh;
     }
@@ -795,7 +869,7 @@ html, body {
     }
 
     .ilupiltide-info {
-        height: 60vh;
+        height: 35vh;
     }
 
     .pildid {
@@ -815,7 +889,7 @@ html, body {
 
 @media (max-width: 600px) {
     #home {
-        height: 50vh;
+        height: 40vh;
     }
 
     .main {
@@ -839,6 +913,7 @@ html, body {
 
     .ilupiltide-info {
         width: 100%;
+        height: 50vh;
     }
 
     .pildid {
