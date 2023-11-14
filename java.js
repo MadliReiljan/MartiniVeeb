@@ -7,6 +7,13 @@ function openModal(imageSrc, imageCaption) {
     modal.style.display = 'block';
     modalImg.src = imageSrc;
     captionText.innerHTML = imageCaption;
+
+// Close the modal when clicking outside the image
+    modal.onclick = function (event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    };
 }
 
 // Function to close the modal
